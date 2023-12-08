@@ -16,8 +16,9 @@ int main()
 
 #if 1
    /* 静态数组 */
-   int desk[BUFFER_SIZE] = { 0 };
-
+   int array[BUFFER_SIZE] = { 0 };
+   printf("array[-1]:%d\n",array[-1]);
+   printf("array[1o]:%d\n",array[10]);
    /* 动态数组 */
    /* 算法 ：
         自动扩容
