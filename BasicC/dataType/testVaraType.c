@@ -42,7 +42,7 @@ int  main()
     printf("len: %d , sex = %c\n", len, sex);                        /*%c就是打印字符*/
  #endif
 
-#if 0
+#if 1
 
 
     /*有符号*/
@@ -151,7 +151,7 @@ int  main()
 
     char *ptr  =  ( char *) malloc ( sizeof ( char ) * 10 );
 #endif
-#if 1
+#if 0
             /*且  或   非  */
            int condition1  = 1;
            int condition2 =  6;
