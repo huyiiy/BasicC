@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
 #include <time.h>
 #include <string.h>
 
@@ -10,23 +10,30 @@ int main()
 {   
 
    
-    int array[ELEMENT_SIZE] ;
+    int array[ELEMENT_SIZE];
     memset(array, 0 , sizeof(int )*ELEMENT_SIZE);
     array[ELEMENT_SIZE] = rand()%RANDOM_NUM +1 ;
     int  target  = 0;
     printf("target：");
     scanf( "%d" ,   &target);
     srand(time(NULL));
+    for(int idx = 0; idx < ELEMENT_SIZE ; idx++)
+    {
+        array[idx] = rand()%RANDOM_NUM +1 ;
+    }
   
     for(int idx1 = 0;idx1< ELEMENT_SIZE; idx1++)
     {
         for(int idx2 = idx1 + 1;idx2 < ELEMENT_SIZE ; idx2++)
         {
-            while(array[idx1] + array[idx2] != target)
+            while(array[idx1] + array[idx2] == target)
             {
+            array[idx1] != array[idx2];
             array[ELEMENT_SIZE] = rand()%RANDOM_NUM +1 ;
             target = array[idx1] + array[idx2];
             printf("idx1:%d, idx2:%d, array[idx1]:%d\n ,array[idx2]:%d\n", idx1, idx2, array[idx1], array[idx2]);
+            
+            
             break;
             }
        
