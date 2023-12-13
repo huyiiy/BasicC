@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "calculateFunc.h"
 
 /*函数参数：可以没有 也可以有*/
 /*函数返回值：可以没有 也可以有
@@ -67,8 +68,19 @@ int main()
 #if 1
     int num1 = 50;
     int num2 = 60;
-    int sum = CalculateAdd(num1, num2);
+    int sum = calculateAdd(num1, num2);
     printf("sum:%d\n", sum);
+
+    int num3 = calculateSub(num1,num2);
+    printf("num3:%d\n", num3);
+
+    int amass = calculateMul(num1, num2);
+    printf("amass:%d\n", amass);
+
+    int num4 = calculateDiv(num1, num2);
+    printf("num4:%d\n", num4);
+
+
 #endif
     return 0;
 }

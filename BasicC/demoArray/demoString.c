@@ -6,8 +6,8 @@ const int g_num = 10;
 
 int main ()
 {
-    /* 字符数组初始化定义的两种方式 */
-   char buffer1[] = "helloworld";
+    /* 字符数组初始化定义的两种方式 */
+    char buffer1[] = "helloworld";
    buffer1[0] = 'H';
    printf("buffer1:%s,\tbuffer1[0]:%c\n", buffer1, buffer1[0]);
 
@@ -20,6 +20,6 @@ int main ()
 
 
 
-   return 0;
+   return 0;
 
 }

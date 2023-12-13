@@ -4,7 +4,7 @@
 /*头文件（.h)一般是函数的声明*/
 
 /*加法*/
-int CalculateAdd(int num1, int num2);
+int calculateAdd(int num1, int num2);
 
 /*减法*/
 int calculateSub(int num1 , int num2);
