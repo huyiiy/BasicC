@@ -1,15 +1,30 @@
 #include "myString.h"
+#include <stdio.h>
 
 
-int myStrlen( const char *str)
+int myStrlen( const char *pStr)
 {
-    int idx = 0;
-    while ( str[idx] != '\0')
+    int count = 0;
+
+#if 0
+    if(pStr == NULL)
     {
-       idx++ ;
+        return count;
     }
-    return idx;
+#else
+    if (!pStr)
+    {
+        return count;
+    }
+#endif
+    while ( pStr[count] != '\0')
+    {
+       count++ ;
+       pStr++ ;
+    }
+    return count;
 }
+#if 0
 int myStrcpy(char *dest, const char *src)
 {
     size_t idx = 0;
@@ -64,14 +79,26 @@ int myStrcmp(const char *s1, const char *s2)
 
 }
 /**/
-int myStrcat(char *dest, const char *src)
+int myStrcat(char *dest, const char *str)
 {
-    const size_t num ;
-    int len = str(src);
-    if (len > num) len = num;
-    else if (len < num) len = str(src);
-
+	char* ret = dest;
+	assert(*dest != NULL);
+	assert(*str);
+	//找到目的字符串里的'\0'
+	while (*dest != '\0')
+	{
+		dest++;
+	}
+	//追加
+	while (*dest++ = *str++)
+	{
+		;
+	}
+	return ret;
 }
+
+
+
  
 
 
@@ -85,6 +112,7 @@ int main()
     char *ptr = &str[0];
     int len = myStrlen(ptr);
     printf("len:%d\n",len);
+
     return 0;
 }
-    
+#endif 
